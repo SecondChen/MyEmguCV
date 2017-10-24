@@ -1,0 +1,2 @@
+# MyEmguCV
+.net EmguCV
