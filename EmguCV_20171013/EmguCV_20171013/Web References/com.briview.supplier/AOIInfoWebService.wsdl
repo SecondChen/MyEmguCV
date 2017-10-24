@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Insert_CIM_Data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlFile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_CIM_DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Insert_CIM_DataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Insert_CIM_DataSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_CIM_Data" />
+  </wsdl:message>
+  <wsdl:message name="Insert_CIM_DataSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_CIM_DataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AOIInfoWebServiceSoap">
+    <wsdl:operation name="Insert_CIM_Data">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Save CIM Information,Return process result Message</wsdl:documentation>
+      <wsdl:input message="tns:Insert_CIM_DataSoapIn" />
+      <wsdl:output message="tns:Insert_CIM_DataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AOIInfoWebServiceSoap" type="tns:AOIInfoWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insert_CIM_Data">
+      <soap:operation soapAction="http://tempuri.org/Insert_CIM_Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AOIInfoWebServiceSoap12" type="tns:AOIInfoWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insert_CIM_Data">
+      <soap12:operation soapAction="http://tempuri.org/Insert_CIM_Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AOIInfoWebService">
+    <wsdl:port name="AOIInfoWebServiceSoap" binding="tns:AOIInfoWebServiceSoap">
+      <soap:address location="http://supplier.briview.com/CIMWebService/service/AOIInfoWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AOIInfoWebServiceSoap12" binding="tns:AOIInfoWebServiceSoap12">
+      <soap12:address location="http://supplier.briview.com/CIMWebService/service/AOIInfoWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

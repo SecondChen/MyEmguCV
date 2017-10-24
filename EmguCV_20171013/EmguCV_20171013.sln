@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmguCV_20171013", "EmguCV_20171013\EmguCV_20171013.csproj", "{CFA00E4F-7992-4893-B2BE-BFC5D6A2D684}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFA00E4F-7992-4893-B2BE-BFC5D6A2D684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFA00E4F-7992-4893-B2BE-BFC5D6A2D684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFA00E4F-7992-4893-B2BE-BFC5D6A2D684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFA00E4F-7992-4893-B2BE-BFC5D6A2D684}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31AC64A6-1B43-4A02-9DC5-69756475386C}
+	EndGlobalSection
+EndGlobal
